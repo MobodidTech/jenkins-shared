@@ -7,7 +7,7 @@ class shared {
 }
 
 def printHello() {
-	sh 'echo "hello world"'
+	sh 'echo "hello world from library"'
 }
 
 
