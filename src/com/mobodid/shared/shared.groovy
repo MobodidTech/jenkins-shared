@@ -1,7 +1,9 @@
 package com.mobodid.shared
 
-def logHelloWorld() {
-	sh 'echo "hello world"'
+class shared {
+	def logHelloWorld() {
+		sh 'echo "hello world"'
+	}
 }
 
 
