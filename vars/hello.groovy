@@ -6,5 +6,9 @@ class shared {
 	}
 }
 
+def printHello() {
+	sh 'echo "hello world"'
+}
+
 
 
