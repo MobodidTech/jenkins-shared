@@ -9,7 +9,7 @@ def isMergeRequest(){
 }
 
 def getMergeRequestInfo(){
-	"PR-${getMergeRequestId}, branch: ${getSourceBranch} by ${getMergeRequestByFullName}\n${getMergeRequestUrl}"
+	"PR-${getMergeRequestId()}, branch: ${(getSourceBranch())} by ${getMergeRequestByFullName()}\n${getMergeRequestUrl()}"
 }
 
 def getMergeRequestUrl(){
