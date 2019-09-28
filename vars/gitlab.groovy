@@ -1,7 +1,3 @@
-def getMergeRequestUrl(){
-    "${gitlabTargetRepoHttpUrl.minus('.git')}/merge_requests/$gitlabMergeRequestIId"
-}
-
 def isMergeRequest(){
     try {
         gitlabMergeRequestIId
@@ -16,16 +12,20 @@ def getMergeRequestInfo(){
 	"PR-${getMergeRequestId}, branch: ${getSourceBranch} by ${getMergeRequestByFullName}\n${getMergeRequestUrl}"
 }
 
+def getMergeRequestUrl(){
+    "${gitlabTargetRepoHttpUrl.minus('.git')}/merge_requests/$gitlabMergeRequestIId"
+}
+
 def getMergeRequestId(){
-    $gitlabMergeRequestIId
+    gitlabMergeRequestIId
 }
 
 def getSourceBranch(){
-    $gitlabSourceBranch
+    gitlabSourceBranch
 }
 
-def $getMergeRequestByFullName(){
-    $gitlabUserName
+def getMergeRequestByFullName(){
+    gitlabUserName
 }
 
 
